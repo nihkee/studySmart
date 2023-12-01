@@ -1,0 +1,197 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font: sans-serif;
+}
+
+/*nav bar start*/
+
+.logo {
+  margin-left: 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #F4F4F6;
+  background-color: #081533;
+  z-index: 3;
+}
+
+.navBar {
+  margin-left: auto;
+}
+
+header * {
+  display: inline;
+}
+
+header li {
+  padding: 20px;
+}
+
+header li:hover {
+  background-color: #1D3557;
+}
+
+header li a {
+  color: #F4F4F6;
+  text-decoration: none;
+}
+
+/*nav bar end*/
+
+/*hero starts*/
+.hero {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #F4F4F6;
+}
+
+.heroText {
+  margin-top: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #001D3D;
+}
+/*hero end*/
+
+/*about start*/
+
+.about {
+  margin-top: 100vh;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #05183E;
+  color: #F4F4F6;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.aboutText {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+/*about end*/
+
+/*user form start*/
+
+.userDataForm {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ecef;
+  color: #F4F4F6;
+}
+
+.formBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #081533;
+  padding: 4%;
+  border-radius: 2em;
+}
+
+.slider {
+  margin: 4%;
+  width: 90%;
+  height: 25px;
+  outline: none;
+  opacity: 0.7;
+}
+
+.userDataSubmit {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*ensures same styling for firefox & chrome*/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: white;
+  height: 1rem;
+}
+input[type="range"]::-moz-range-track {
+  background: white;
+  height: 1rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #053a5f;
+}
+input[type="range"]::-moz-range-thumb {
+  background-color: #001D3D;
+}
+
+
+/* user data form ends */
+
+/* user feedback form starts */
+
+.userFeedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #DAE1E8;
+  color: #081533;
+}
+
+.questions {
+  background-color: #081533;
+  padding: 2%;
+  color:white;
+}
+
+.answerLabels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color:#001D3D;
+  background-color: #e9ecef;
+}
+
+.answerLabel {
+  text-align: center;
+  flex: 1;
+}
+
+.answerBtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  padding: 5px;
+}
+
+input[type="radio"] {
+  width: 1.25em;
+  height: 1.25em;
+}
+/* user feedback form ends */
