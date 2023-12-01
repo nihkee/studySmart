@@ -38,6 +38,24 @@ app.post("/preferences", (request, response) => {
         })
     }
 })
+
+//process user's email
+app.post("/emails", (request, response) => {
+    try {
+        var email = request.body["email"];
+        console.log(email);
+        response.json({
+            res:`email ${email} received`
+        })
+    }
+    catch (error) {
+        console.log(error)
+        response.json({
+            a:"poopoo response"
+        })
+    }
+})
+
 // app.put("/")
 // app.delete("/")
 
