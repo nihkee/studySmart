@@ -3,8 +3,11 @@ import logo from './logo.svg';
 import axios from 'axios';
 import './App.css';
 
+//consts for data collection
 const PREFERENCES_DEFAULT_VALUE = "250";
 var constRecommendation = "";
+//consts for email collection
+const EMAIL_DEFAULT_VALUE = "ncayas1@umbc.edu";
 
 function App() {
   // useEffect(() => {
@@ -21,6 +24,7 @@ function App() {
   //   }
   //   testRequest()
   // }, [])
+  //process user data
   const [lighting, setLighting] = useState(PREFERENCES_DEFAULT_VALUE);
   const [noise, setNoise] = useState(PREFERENCES_DEFAULT_VALUE);
   const [temperature, setTemperature] = useState(PREFERENCES_DEFAULT_VALUE);
@@ -48,7 +52,26 @@ function App() {
     setRecommendation(constRecommendation)
   }
 
-  //js for user data form starts
+  //process user's email
+  const [email, setEmail] = useState(EMAIL_DEFAULT_VALUE);
+
+  const processEmail = async (e) => {
+    console.log("send post emails " + email)
+    e.preventDefault();
+    await axios.post(
+      "http://localhost:8000/emails",
+      {
+        "email": email
+      }
+    )
+    .then((res) => {
+      console.log(res.data["res"])
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+  }
+
   return (
     <div class = "page">
     <head>
@@ -120,6 +143,17 @@ function App() {
       </div>
     </div>
     {/* user form ends */}
+    {/* user email starts*/}
+    <div id = "userEmail" class = "userEmail">
+    <h1>User Email</h1>
+    <form id="emailForm" onSubmit = {processEmail}>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" onChange = {(e) => setEmail(e.target.value)}/>
+        
+        <button>Submit</button>
+    </form>
+    </div>
+    {/* user email ends*/}
     {/* user feedback starts */}
     <div id = "userFeedback" class = "userFeedback">
       <h1>We value your feedback.</h1>

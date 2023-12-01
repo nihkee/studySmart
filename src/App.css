@@ -149,6 +149,17 @@ input[type="range"]::-moz-range-thumb {
 
 /* user data form ends */
 
+/* user email collection starts */
+
+.userEmail {
+  padding: 3%;
+  background-color: #081533;
+  color:#DAE1E8;
+  text-align: center;
+}
+
+/* user email collection starts */
+
 /* user feedback form starts */
 
 .userFeedback {
