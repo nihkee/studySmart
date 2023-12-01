@@ -2,7 +2,15 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const mongodb = require("mongodb")
 const cors = require("cors")
+const sqlite3 = require("sqlite3").verbose()
+
 const app = express();
+let db = new sqlite3.Database("email_queue.db", (err) => {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log("Connected to SQLite database");
+});
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
