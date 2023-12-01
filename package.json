@@ -9,9 +9,11 @@
     "axios": "^1.5.1",
     "cors": "^2.8.5",
     "mongodb": "^6.1.0",
+    "node-cron": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sqlite3": "^5.1.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -37,6 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "https://localhost:8000"
+  }
 }
