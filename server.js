@@ -78,7 +78,7 @@ cron.schedule('* * * * *', () => {
             from: emailCredentials["user"],
             to: row.email,
             subject: 'Test Feedback Form :)',
-            html: "<b> Hello World?</b>"
+            html: <div><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkuui2Cz8SSbOsvCJze_6geomSEKKqL23Qyfhj6l6jHg7_FA/viewform?embedded=true" width="640" height="412" frameborder="0" marginheight="0" marginwidth="0"></iframe></div>
         }, (error, info) => {
             if (error) {
                 console.error(error.message);
